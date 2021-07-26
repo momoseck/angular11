@@ -3,7 +3,7 @@
     {
       "id": 2,
       "name": "Printer",
-      "price": 300,
+      "price": "3002",
       "quantity": "100",
       "selected": false,
       "available": true
@@ -23,6 +23,30 @@
       "selected": true,
       "available": false,
       "id": 4
+    },
+    {
+      "name": "sdsd",
+      "price": "23",
+      "quantity": 0,
+      "selected": true,
+      "available": true,
+      "id": 5
+    },
+    {
+      "name": "rere",
+      "price": 0,
+      "quantity": 0,
+      "selected": true,
+      "available": true,
+      "id": 6
+    },
+    {
+      "name": "rere",
+      "price": 0,
+      "quantity": 0,
+      "selected": true,
+      "available": true,
+      "id": 7
     }
   ]
 }

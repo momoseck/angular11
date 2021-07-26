@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product.model';
+import { EventDrivenService } from 'src/app/services/event.driven.service';
 import {
   ActionEvent,
   AppDataState,
@@ -15,16 +16,17 @@ import {
 })
 export class ProductListComponent implements OnInit {
   @Input() products$: Observable<AppDataState<Product[]>> | null = null; // syntaxe utiliser $ à la fin convention
-  @Output() productEventEmitter: EventEmitter<ActionEvent> = new EventEmitter();
+  //@Output() productEventEmitter: EventEmitter<ActionEvent> = new EventEmitter();
   readonly DataStateEnum = DataStateEnum;
-  constructor() {}
+  constructor(private eventdrivenService:EventDrivenService) {}
 
   ngOnInit(): void {}
-  onSelect(product: Product) {
+ /* onSelect(product: Product) {
     this.productEventEmitter.emit({
       type: ProductActionsType.SELECT_PRODUCTS,
       payload: product,
     });
+    this.eventdrivenService.publishEvent
   }
   onDelete(product: Product) {
     this.productEventEmitter.emit({
@@ -40,5 +42,5 @@ export class ProductListComponent implements OnInit {
   }
   onActionEvent($event:ActionEvent){
     this.productEventEmitter.emit($event);
-  }
+  }*/
 }
